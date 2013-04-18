@@ -9,10 +9,15 @@ function InitializeLauncher()
 function LaunchParticipantWebApp()
 {
     var DeviceID = device.uuid;
-    var ARCloudWebAPIAddress = "http://meridiasswebsite.cloudapp.net/Participant/JoinUsingMeridiaDevice";
 
-    alert(ARCloudWebAPIAddress + "/" + DeviceID);
+    var ARCloudWebsiteBaseAddress = "http://meridiasswebsite.cloudapp.net" ;
+    var ARCloudWebsiteController = "/Participant";
+    var ARCloudWebsiteAction = "/JoinUsingMeridiaDevice";
+    var ARCloudWebsiteQueryString = "?DeviceID=";
+    var ARCloudWebsiteURL = ARCloudWebsiteBaseAddress + ARCloudWebsiteController + ARCloudWebsiteAction + ARCloudWebsiteQueryString + DeviceID;
 
-    open(ARCloudWebAPIAddress + "/" + DeviceID);
+    alert(ARCloudWebsiteURL);
+    open(ARCloudWebsiteURL);
+
 }
 
