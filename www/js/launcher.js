@@ -10,13 +10,19 @@ function LaunchParticipantWebApp()
 {
     var DeviceID = device.uuid;
 
-    var ARCloudWebsiteBaseAddress = "http://meridiasswebsite.cloudapp.net" ;
+    var ARCloudWebsiteBaseAddress = "http://meridiaprowebsite.cloudapp.net" ;
     var ARCloudWebsiteController = "/Participant";
-    var ARCloudWebsiteAction = "/JoinUsingMeridiaDevice";
-    var ARCloudWebsiteQueryString = "?DeviceID=";
-    var ARCloudWebsiteURL = ARCloudWebsiteBaseAddress + ARCloudWebsiteController + ARCloudWebsiteAction + ARCloudWebsiteQueryString + DeviceID;
 
-    alert(ARCloudWebsiteURL);
+    var ARCloudWebsiteAction = "/Join";
+    /* var ARCloudWebsiteAction = "/JoinUsingMeridiaDevice"; */
+
+    var ARCloudWebsiteQueryString = "?DeviceID=";
+
+/*    var ARCloudWebsiteURL = ARCloudWebsiteBaseAddress + ARCloudWebsiteController + ARCloudWebsiteAction + ARCloudWebsiteQueryString + DeviceID; */
+
+    var ARCloudWebsiteURL = ARCloudWebsiteBaseAddress + ARCloudWebsiteController + ARCloudWebsiteAction;
+
+    /* alert(ARCloudWebsiteURL); */
     open(ARCloudWebsiteURL);
 
 }
